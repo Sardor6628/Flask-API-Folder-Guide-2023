@@ -5,4 +5,3 @@ PyJWT
 Flask-SQLAlchemy
 Flask-Migrate
 flask-bcrypt
-mysqlclient
