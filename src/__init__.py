@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, Response, json
 import os
 from src.config.config import Config
 from dotenv import load_dotenv
@@ -42,6 +42,13 @@ app.register_blueprint(api, url_prefix="/api")
 
 # import models to let the migrate tool know
 from src.models.user_model import User
+from src.models.task_model import Task
+
+
 @app.route('/')
 def index():
-   return '<html><body><h1>Hello World</h1></body></html>'
+    return Response(
+        response=json.dumps({'status': "success", "message": "WELCOME TO API learning!"}),
+        status=200,
+        mimetype='application/json'
+    )

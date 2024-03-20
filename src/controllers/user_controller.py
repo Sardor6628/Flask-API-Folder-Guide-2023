@@ -103,3 +103,4 @@ def get_all_users():
             status=500,
             mimetype='application/json'
         )
+
