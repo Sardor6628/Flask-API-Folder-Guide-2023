@@ -42,3 +42,6 @@ app.register_blueprint(api, url_prefix="/api")
 
 # import models to let the migrate tool know
 from src.models.user_model import User
+@app.route('/')
+def index():
+   return '<html><body><h1>Hello World</h1></body></html>'
